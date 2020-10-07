@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./App.css";
 
@@ -33,8 +33,10 @@ const Patient = ({ id, name, gender, birthDate, lastUpdate, MRN, SSN }) => {
       });
   };
 
-  searchObservation(id);
-  searchEncounter(id);
+  useEffect(() => {
+    searchObservation(id);
+    searchEncounter(id);
+  }, [id]);
 
   return (
     <div className="patient">
