@@ -33,6 +33,9 @@ const Patient = ({ id, name, gender, birthDate, lastUpdate, MRN, SSN }) => {
       });
   };
 
+  searchObservation(id);
+  searchEncounter(id);
+
   return (
     <div className="patient">
       <ul>
